@@ -1,4 +1,4 @@
-def consultAllCars(car_list):
+def consult_all_cars(car_list):
     if (len(car_list) < 1):
         print("La lista esta vacia")
 
@@ -9,7 +9,7 @@ def consultAllCars(car_list):
                   car_list[x]['brand'], 'modelo:', car_list[x]['model'])
 
 
-def consultEspecificCar(car_list, car_brand):
+def consult_especific_car(car_list, car_brand):
     for x in car_list:
         if (car_brand in x.values()):
             print(x)
