@@ -7,8 +7,8 @@
 # Cada objeto del coche sera un diccionario
 # Eliminar por marca
 
-from src.helpers.writeFile import write_file
-from src.helpers.readFile import read_file
+from src.helpers.write_file import write_file
+from helpers.read_file import read_file
 from src.consult import consult_all_cars, consult_especific_car
 from src.create import add_car
 from src.remove import remove_car
