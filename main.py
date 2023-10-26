@@ -9,7 +9,7 @@
 
 from src.helpers.writeFile import write_file
 from src.helpers.readFile import read_file
-from src.consult import consult
+from src.consult import consultAllCars, consultEspecificCar
 from src.create import addCar
 from src.remove import removeCar
     
@@ -22,10 +22,17 @@ def menu(car_dictionary_list, addCar):
                 addCar(car_dictionary_list)
             case "eliminar":
                 carBrand = input('Introduzca la marca del coche a eliminar')
-                car_dictionary_list = removeCar(car_dictionary_list,carBrand)
-                print(f'El coche {carBrand} ha sido eliminado')
+                car_dictionary_list = removeCar(car_dictionary_list,carBrand.capitalize())
+                print(f'El coche {carBrand.capitalize()} ha sido eliminado')
             case "consultar":
-                consult(car_dictionary_list)
+                option = input('Desea consultar todos los coches o alguno en especifico? Ingrese \"Todo\" o \"Especifico\"\n')
+                if(option.lower() == 'todo'):
+                    consultAllCars(car_dictionary_list)
+                elif(option.lower() == 'especifico'):
+                    car_brand = input('Ingrese el modelo del coche que desea buscar\n')
+                    consultEspecificCar(car_dictionary_list, car_brand.capitalize())
+                else:
+                    print('No ha elegido ninguna de las opciones anteriores')
             case "finalizar":
                 write_file(car_dictionary_list)
                 exit(0)
