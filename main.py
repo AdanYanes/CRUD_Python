@@ -8,10 +8,10 @@
 # Eliminar por marca
 
 from src.helpers.write_file import write_file
-from helpers.read_file import read_file
+from src.helpers.read_file import read_file
 from src.consult import consult_all_cars, consult_especific_car
 from src.create import add_car
-from src.remove import remove_car
+from src.remove import remove_especific_car
     
 def menu(car_dictionary_list, add_car):
     while(True):
@@ -21,9 +21,14 @@ def menu(car_dictionary_list, add_car):
             case "ingresar":
                 add_car(car_dictionary_list)
             case "eliminar":
-                car_brand = input('Introduzca la marca del coche a eliminar')
-                car_dictionary_list = remove_car(car_dictionary_list,car_brand.capitalize())
-                print(f'El coche {car_brand.capitalize()} ha sido eliminado')
+                option = input('Desea eliminar todos los coches o alguno en especifico? Ingrese \"Todo\" o \"Especifico\"\n')
+                if(option.lower() == 'todo'):
+                    car_dictionary_list.clear()
+                elif(option.lower() == 'especifico'):
+                    car_brand = input('Ingrese el modelo del coche que desea eliminar\n')
+                    car_dictionary_list = remove_especific_car(car_dictionary_list, car_brand.capitalize())
+                else:
+                    print('No ha elegido ninguna de las opciones anteriores')
             case "consultar":
                 option = input('Desea consultar todos los coches o alguno en especifico? Ingrese \"Todo\" o \"Especifico\"\n')
                 if(option.lower() == 'todo'):
