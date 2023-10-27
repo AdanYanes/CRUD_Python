@@ -5,8 +5,7 @@ def consult_all_cars(car_list):
     else:
         counter = 1
         for x in range(len(car_list)):
-            print((x+1), 'marca:',
-                  car_list[x]['brand'], 'modelo:', car_list[x]['model'])
+            print((x+1), 'marca:', car_list[x]['brand'], 'modelo:', car_list[x]['model'])
 
 
 def consult_especific_car(car_list, car_brand):
