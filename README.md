@@ -23,10 +23,10 @@ The project is organized into the following files:
 - `writeFile`: Helper file made for assist the Main executable and write the data into the db.
 
 ## Documentation
-[main](./src./docs/main.md)
-[consult](./src./docs/consult.md)
-[create](./src./docs/create.md)
-[update](./src./docs/update.md)
-[remove](./src./docs/remove.md)
-[read_file](./src./docs/read_file.md)
-[write_file](./src./docs/write_file.md)
+[main](./src/docs/main.md)
+[consult](./src/docs/consult.md)
+[create](./src/docs/create.md)
+[update](./src/docs/update.md)
+[remove](./src/docs/remove.md)
+[read_file](./src/docs/read_file.md)
+[write_file](./src/docs/write_file.md)
