@@ -15,12 +15,12 @@ The goal of this project is to analyze a given db, extract the data on it and st
 The project is organized into the following files:
 
 - `main`: Main executable of the project.
-- `remove`: Auxiliar class made for removing data from the cars.
-- `create`: Auxiliar class made for creates and add a new car.
-- `consult`: Auxiliar class made for consult the list and extract all the data from the cars.
-
+- `remove`: Auxiliar file with methods made for removing data from the cars.
+- `create`: Auxiliar file with methods made for creates and add a new car.
+- `consult`: Auxiliar file with methods made for consult the list and extract all the data from the cars.
+- `update`: Auxiliar file with methods made form update elements on the list.
 - `readFile`: Helper file made for assist the Main executable and read all the data from the db.
 - `writeFile`: Helper file made for assist the Main executable and write the data into the db.
 
 ## Documentation
-*IN PROGRESS*
+[main]()
