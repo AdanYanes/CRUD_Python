@@ -7,25 +7,26 @@
 # Cada objeto del coche sera un diccionario
 # Eliminar por marca
 
-from src.helpers.writeFile import write_file
-from src.helpers.readFile import read_file
-from src.consult import consult
-from src.create import addCar
-from src.remove import removeCar
+from src.helpers.write_file import write_file
+from src.helpers.read_file import read_file
+from src.consult import consult_options
+from src.create import add_car
+from src.remove import remove_options
+from src.update import update_options
     
-def menu(car_dictionary_list, addCar):
+def menu(car_dictionary_list):
     while(True):
-        option = input("Introduzca la opcion a realizar, siendo estas: ingresar, eliminar, consultar o finalizar\n")
+        option = input("Introduzca la opcion a realizar, siendo estas: ingresar, eliminar, consultar, actualizar o finalizar\n")
     
         match option:
             case "ingresar":
-                addCar(car_dictionary_list)
+                add_car(car_dictionary_list)
             case "eliminar":
-                carBrand = input('Introduzca la marca del coche a eliminar')
-                car_dictionary_list = removeCar(car_dictionary_list,carBrand)
-                print(f'El coche {carBrand} ha sido eliminado')
+                car_dictionary_list = remove_options(car_dictionary_list)
             case "consultar":
-                consult(car_dictionary_list)
+                consult_options(car_dictionary_list)
+            case "actualizar":
+                car_dictionary_list = update_options(car_dictionary_list)
             case "finalizar":
                 write_file(car_dictionary_list)
                 exit(0)
@@ -35,4 +36,4 @@ def menu(car_dictionary_list, addCar):
 
 
 car_dictionary_list = read_file()
-menu(car_dictionary_list, addCar)
+menu(car_dictionary_list)
