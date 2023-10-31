@@ -4,7 +4,7 @@ In this project, we will develop a program capable on read a file, get the dicti
 
 ## Project Description
 
-The goal of this project is to analyze a given db, extract the data on it and store it on a List cariable. Then, the program is going to ask the user for an option. In case the user decided to add another car, the program will store it in the variable. When the user finish using the progrma, this will store the data back to the db.
+The goal of this project is to analyze a given db, extract the data on it and store it on a List variable. Then, the program is going to ask the user for an option. In case the user decided to add another car, the program will store it in the variable. When the user finish using the progrma, this will store the data back to the db.
 
 ## Project Objectives
 
@@ -23,4 +23,10 @@ The project is organized into the following files:
 - `writeFile`: Helper file made for assist the Main executable and write the data into the db.
 
 ## Documentation
-[main]()
+[main](./src./docs/main.md)
+[consult](./src./docs/consult.md)
+[create](./src./docs/create.md)
+[update](./src./docs/update.md)
+[remove](./src./docs/remove.md)
+[read_file](./src./docs/read_file.md)
+[write_file](./src./docs/write_file.md)
